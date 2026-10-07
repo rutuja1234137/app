@@ -27,7 +27,7 @@ pipeline {
         }
         stage ("Deployment")  {
                steps  {
-                 bat  "del /q /s C:\\inetpub\\wwwroot\\Python*"
+                 bat  "del /q /s C:\\inetpub\\wwwroot\\Python\\*"
                 bat  "xcopy /E /Y /I dist\\Python\\browser\\* C:\\inetpub\\wwwroot\\Python"
                       }       
             }
